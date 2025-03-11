@@ -1,0 +1,29 @@
+{
+    "name": "ay4t/php-watzap-id",
+    "description": "PHP REST Client for Watzap.id API Integration",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ay4t\\WatzapId\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayatulloh Ahad R",
+            "email": "ayatullohahadr@gmail.com"
+        }
+    ],
+    "repositories": {
+        "php-rest-client": {
+            "type": "vcs",
+            "url": "https://github.com/ay4t/php-rest-client"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "ay4t/php-rest-client": "dev-master",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
