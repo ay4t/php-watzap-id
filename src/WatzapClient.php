@@ -4,6 +4,7 @@ namespace Ay4t\WatzapId;
 
 use Ay4t\RestClient\Client;
 use Ay4t\RestClient\Exceptions\ApiException;
+use Ay4t\RestClient\Logger\DefaultLogger;
 use Ay4t\WatzapId\Config\WatzapConfig;
 
 class WatzapClient extends Client
@@ -40,7 +41,8 @@ class WatzapClient extends Client
         }
 
         $this->config = $config;
-        parent::__construct($config);
+        $logger = new DefaultLogger($config->getLogFile());
+        parent::__construct($config, $logger);
     }
 
     /**

@@ -16,6 +16,11 @@ class WatzapConfig extends Config
      */
     private ?string $numberKey;
 
+    /**
+     * @var string|null Custom path for rest-client log
+     */
+    private ?string $logFile = null;
+
     public function __construct()
     {
         parent::__construct();
@@ -60,5 +65,25 @@ class WatzapConfig extends Config
     public function getNumberKey(): ?string
     {
         return $this->numberKey;
+    }
+
+    /**
+     * Set custom log file path
+     * @param string $path
+     * @return $this
+     */
+    public function setLogFile(string $path): self
+    {
+        $this->logFile = $path;
+        return $this;
+    }
+
+    /**
+     * Get custom log file path
+     * @return string|null
+     */
+    public function getLogFile(): ?string
+    {
+        return $this->logFile;
     }
 }
